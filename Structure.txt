@@ -1,0 +1,53 @@
+🧠 Why Automated Testing?
+
+Imagine your API has 50 endpoints.
+
+After changing one function:
+
+Developer Changes Code
+        │
+        ▼
+   Run Test Suite
+        │
+   ┌────┴────┐
+   ▼         ▼
+ PASS       FAIL
+   │         │
+   ▼         ▼
+Deploy    Fix Bug
+
+Instead of manually checking every endpoint, Pytest can test everything in seconds.
+
+The goal is:
+
+Code → Test → Build → Deploy
+         ❌
+       Stop if
+       tests fail
+
+🛠 Tech Stack
+Python
+Flask
+Pytest
+SQLAlchemy
+SQLite
+Coverage.py
+
+📂 Project Structure
+api-testing-framework/
+│
+├── app/
+│   ├── __init__.py
+│   ├── models.py
+│   └── routes.py
+│
+├── tests/
+│   ├── __init__.py
+│   ├── conftest.py
+│   ├── test_health.py
+│   ├── test_users.py
+│   └── test_products.py
+│
+├── requirements.txt
+├── pytest.ini
+└── README.md
